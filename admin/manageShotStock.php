@@ -42,9 +42,9 @@
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li ><a href="manageStockPanel.php"><span class="glyphicon glyphicon-yen"></span> Manage Stock</a></li>
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-time"></span> History</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-time"></span> History</a></li>
                 <li><a href="manageTellerPanel.php"><span class="glyphicon glyphicon-book"></span> Manage Tellers</a></li>
-                <li><a href="manageShotStock.php"><span class="glyphicon glyphicon-th-list"></span> Show Shot Stock</a></li>
+                <li class="active"><a href="#"><span class="glyphicon glyphicon-th-list"></span> Show Shot Stock</a></li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -59,10 +59,10 @@
         <div class="row"><br>
             <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <div class="well">
-                        <h4 class="historyIntro">History Of Activities</h4>
+                    <div class="well" style="padding:10px;">
+                        <h4 class="historyIntro">List Of Stock Whose Quantity Are 10 Or Below</h4>
                     </div>
-                    <div class="historyView"><p></p></div>
+                    <div class="stockView"><p></p></div>
                 </div>
             <div class="col-md-1"></div>
         </div>
@@ -72,19 +72,19 @@
     <script src="../js/jquery-ui.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        function getAllStock(){
+        function getShotStock(){
             $.ajax({
                 method: 'GET',
-                url: 'getHistory.php',
+                url: 'getShotStock.php',
                 success: function(data){
-                    $('.historyView').html(data);
+                    $('.stockView').html(data);
                 },
                 error: function(error){
                     console.log("Error " +error);
                 }
             });
         }
-        getAllStock();
+        getShotStock();
     </script>
   </body>
 </html>

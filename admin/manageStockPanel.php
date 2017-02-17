@@ -37,18 +37,19 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Shop Name Admin Panel</a>
+            <a class="navbar-brand" href="#">The Lord's Step Ventures Admin Panel</a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Manage Stock</a></li>
-                <li><a href="historyPanel.php">History</a></li>
-                <li><a href="#">Show Shot Stock</a></li>
+                <li class="selected"><a href="#"><span class="glyphicon glyphicon-yen"></span> Manage Stock</a></li>
+                <li><a href="historyPanel.php"><span class="glyphicon glyphicon-time"></span> History</a></li>
+                <li><a href="manageTellerPanel.php"><span class="glyphicon glyphicon-book"></span> Manage Tellers</a></li>
+                <li><a href="manageShotStock.php"><span class="glyphicon glyphicon-th-list"></span> Show Shot Stock</a></li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['username']; ?></a></li>
-                <li><a href="../functions/logout.php">Logout</a></li>
+                <li><a href="../functions/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
           </div>
         </div>
@@ -64,7 +65,7 @@
                             <input type="text" name="stockSearch" placeholder=" Search For Stock" class="searchInput">
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span> ADD</button>
                         </form>
-                    </div>
+                    </div><br>
                     <div class="stockView"><p></p></div>
                 </div>
             <div class="col-md-1"></div>
@@ -104,7 +105,7 @@
     <script src="../js/jquery-ui.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        
+
         function getAllStock(){
             $.ajax({
                 method: 'GET',

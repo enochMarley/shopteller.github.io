@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -23,16 +24,17 @@
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
 				<div class="formDiv">
-					<img src="includes/images/Logo.png" alt="logo" class="img-circle formLogo"><br><br><br>
+					<!--<img src="includes/images/Logo.png" alt="logo" class="img-circle formLogo"><br><br><br>-->
+                    <h3 style="text-align:center;">The Lord's Step Ventures</h3>
+                    <p class="inst">Enter Your Admin Username And Password To Login</p><br><br>
 					<p class="errMsg"></p>
 					<form class="adminLoginForm" action="" method="post">
-						<label>Teller Username:</label><br>
-						<input type="text" name="tellerName" required><br><br>
-						<label>Teller Password:</label><br>
-						<input type="password" name="tellerPassword" required><br><br>
-						<button type="submit" class="btn btn-primary submitBtn">Login</button>
+						<!--<label>Teller Username:</label><br>-->
+						<input type="text" name="tellerName" required placeholder="Teller Username"><br><br>
+						<!--<label>Teller Password:</label><br>-->
+						<input type="password" name="tellerPassword" required placeholder="Teller Password"><br><br>
+						<button type="submit" class="btn btn-default submitBtn">Login</button>
 					</form><br><br>
-					<p class="bg-primary inst">Enter Your Admin Username And Password To Login</p>
 				</div>
 			</div>
 			<div class="col-md-4"></div>
@@ -75,7 +77,7 @@
 
                 <script type="text/javascript">
                     $('.errMsg').html("Wrong Admin Username Or Password").css('color','red');
-                    $('.formDiv').effect("shake", "slow");
+                    $('.formDiv').effect("bounce", "slow");
                 </script>
 
 	<?php   }

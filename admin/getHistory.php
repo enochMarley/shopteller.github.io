@@ -19,7 +19,7 @@
                     </button><br><br>
 
         <?php
-                $query1 = "SELECT historyActivity, TIME(historyTime) AS historyTime FROM historytbl WHERE DATE(historyTime) =  '$mainDate'";
+                $query1 = "SELECT historyActivity, TIME(historyTime) AS historyTime FROM historytbl WHERE DATE(historyTime) =  '$mainDate' ORDER BY historyTime";
                 $result1 = $link->query($query1);
                 if (mysqli_num_rows($result1) > 0){
 

@@ -2,13 +2,21 @@ body{
     padding: 0;
     margin: 0;
     position: relative;
+    background-image: url('../includes/images/cart2.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.navbar{
+    opacity: 0.8;
 }
 .formDiv{
-    background: #fff !important;
-    margin-top: 10vh;
-    border: 1px solid #c0c0c0;
+    background: #e2e4e7 !important;
+    margin-top: 20vh;
+    position: relative;
+    z-index: 999;
+    /*border: 1px solid #c0c0c0;
+    box-shadow: 0px 6px 6px #c0c0c0, 0px 6px 12px #c0c0c0;*/
     border-radius: 3px;
-    box-shadow: 0px 6px 6px #c0c0c0, 0px 3px 6px #c0c0c0;
     padding: 10% 0 0 0;
 }
 .formLogo{
@@ -19,19 +27,30 @@ body{
 .adminLoginForm input{
     width: 90%;
     height: 40px;
-    border: 1px solid #c0c0c0;
+    border: 1px solid #33b3e9;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: bold;
     margin-left: 5%
 }
 .adminLoginForm button{
     height: 40px;
-    width: 15%;
-    margin-left: 5%
+    background: #33b3e9;
+    color: #fff;
+    border-radius: 30px;
+    width: 90%;
+    margin-left: 5%;
+}
+.adminLoginForm button:hover{
+    background: #33b3d1;
+    color: #fff;
 }
 .adminLoginForm label{
     margin-left: 5%
 }
 .inst{
     text-align: center;
+    color: #33b3e9;
 }
 .errMsg{
     text-align: center;
@@ -67,12 +86,16 @@ div.col-sm-9 div {
     margin-top: 3%;
 }
 .stockForm input{
-    width: 90%;
+    width: 92%;
     height: 40px;
     border: 1px solid #c0c0c0;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: bold;
 }
 .stockForm button{
     height: 40px;
+    border-radius: 30px;
 }
 .addStockForm input{
     width:100%;
@@ -125,4 +148,43 @@ div.col-sm-9 div {
     background: transparent;
     border: 1px solid transparent;
     color: #111;
+}
+.addTellerForm input{
+    border-radius: 20px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid #33b3e9;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.addTellerForm button{
+    height: 40px;
+    background: #33b3e9;
+    color: #fff;
+    border-radius: 30px;
+    width: 100%;
+}
+.addTellerForm button:hover{
+    background: #33b3d1;
+    color: #fff;
+}
+.deleteTelerForm button{
+    height: 40px;
+    color: #fff;
+    border-radius: 30px;
+    width: 20%;
+}
+.deleteTelerForm button:hover{
+    color: #fff;
+}
+.dialPadDiv{
+    margin-top: 3%;
+}
+.padDiv .row div{
+    padding: 0px;
+}
+.padDiv button{
+    width: 100%;
+    height: 60px;
 }

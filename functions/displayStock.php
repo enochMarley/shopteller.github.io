@@ -1,7 +1,7 @@
 <?php
     function displayStockFunc(){
         include "dbConfig.php";
-        $query  = "SELECT * FROM stocktbl ORDER BY stockName ASC";
+        $query  = "SELECT * FROM stocktbl WHERE stockQuantity > 0 ORDER BY stockName ASC";
         $result  = $link->query($query);
 
         if (mysqli_num_rows($result) > 0){

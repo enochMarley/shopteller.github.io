@@ -8,7 +8,7 @@
     $query = "SELECT * FROM stocktbl ORDER BY stockName;";
     $result = $link->query($query);
     if (mysqli_num_rows($result) > 0) { ?>
-        <table class="table table-hover">
+        <table class="table table-hover stockTbl">
             <thead>
               <tr>
                 <th>Stock</th>
@@ -46,7 +46,11 @@
 
 ?>
 <style media="screen">
-    .editStockForm input{
-        width:100%;border-radius: 3px;height: 35px;border: 1px solid #c0c0c0;
+    .stockTbl{
+        background: #f7f7f7;
+        opacity: 0.7;
+    }
+    .stockTbl tbody tr:hover{
+        background: #c0c0c0;
     }
 </style>

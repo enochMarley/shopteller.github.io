@@ -1,7 +1,6 @@
 <?php
     //the script to handle the editing of stocks
     include "../../functions/dbConfig.php";
-    session_start();
     $oldStockName = $_POST['oldStockName'];
     $stockName = $_POST['stockName'];
     $stockPrice = $_POST['stockPrice'];
